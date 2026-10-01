@@ -150,10 +150,8 @@ def show_hierarchy(resolver):
 
     def draw(zone, prefix, is_last, is_root):
         s = server_for(zone)
-        s = server_for(zone)
         if s is None:
             return
-        label = ". (root)" if zone == "." else zone
         label = ". (root)" if zone == "." else zone
         info = f"{s.name}  [{s.level}]  queries: {s.queries_received}"
         if is_root:
